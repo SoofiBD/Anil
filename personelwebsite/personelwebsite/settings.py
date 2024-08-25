@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'page.apps.PagesConfig',
+    'page.apps.PageConfig',
+    'servisler.apps.ServislerConfig',
     
 ]
 
@@ -69,6 +70,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'personelwebsite.wsgi.application'
 

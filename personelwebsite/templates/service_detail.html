@@ -1,0 +1,40 @@
+{% extends 'partials/_base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="mu-course-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="mu-course-content-area">
+          <div class="row">
+            <div class="col-md-9">
+              <!-- start course content container -->
+              <div class="mu-course-container mu-blog-single">
+                <div class="row">
+                  <div class="col-md-12">
+                    <article class="mu-blog-single-item">
+                      <h2><b><a href="#">{{service.title}}</a></b></h2>
+                      <figure class="mu-blog-single-img">
+                        <a href="#">
+                          <img alt="img" src="{{service.image.url}}" class="service-image" />
+                        </a>
+                        <figcaption class="mu-blog-caption">
+                        </figcaption>
+                      </figure>
+                      <div class="mu-blog-description">
+                        <p>{{service.description}}</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <!-- end course content container -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

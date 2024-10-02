@@ -5,9 +5,15 @@ from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.core.mail import send_mail
 from django.contrib import messages
+from servisler.models import Service
 
 def index(request):
-    return render(request, 'index.html')
+    servisler = Service.objects.all()
+    context = {
+        'servisler': servisler
+    }
+    return render(request, 'index.html', context)
+
 
 class ContactView(SuccessMessageMixin,FormView):
     template_name = 'contact.html'
@@ -18,4 +24,8 @@ class ContactView(SuccessMessageMixin,FormView):
     def form_valid(self,form):
         form.save()
         return super().form_valid(form)
+    
+
+def about(request):
+    return render(request, 'about.html')
     
